@@ -1,0 +1,24 @@
+.note-feed {
+    font-family: fallIsComing;
+    color: rgb(231, 230, 231);
+    padding: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    background: rgb(54, 72, 110);
+}
+
+.note {
+    background: rgb(104, 178, 99);
+    padding: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.note:last-child {
+    margin-bottom: 0;
+}
+
+.note:hover {
+    cursor: pointer;
+    background: green;
+}

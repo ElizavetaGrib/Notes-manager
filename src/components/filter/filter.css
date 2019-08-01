@@ -1,0 +1,18 @@
+.filter-tag {
+    font-size: 1.5em;
+    background: rgb(104, 178, 99);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.filter-tag:hover {
+    cursor: pointer;
+    background: green;
+    color: rgb(231, 230, 231);
+}
+
+.active {
+    color: rgb(104, 178, 99);
+    background: rgb(231, 230, 231);
+}

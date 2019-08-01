@@ -1,0 +1,13 @@
+.header {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+
+.text {
+    font-size: 1.5em;
+}
+
+.date {
+    margin-top: 0.5em;
+}

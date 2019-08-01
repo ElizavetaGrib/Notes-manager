@@ -1,0 +1,16 @@
+.add-button {
+    font-family: fallIsComing;
+    color: rgb(231, 230, 231);
+    padding: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    background: rgb(104, 178, 99);
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+.add-button:hover {
+    cursor: pointer;
+    background: green;
+}

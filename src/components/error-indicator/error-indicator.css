@@ -1,0 +1,19 @@
+.error-header {
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 1.7em;
+    text-align: center;
+    background: rgb(255, 100, 100);
+    color: rgb(231, 230, 231);
+}
+
+summary {
+    font-size: 1.5em;
+}
+
+details{
+    padding: 1em;
+    border-radius: 1em;
+    background: rgb(54, 72, 110);
+    color: rgb(231, 230, 231);
+}

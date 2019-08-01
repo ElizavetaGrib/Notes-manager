@@ -1,0 +1,23 @@
+@font-face {
+    font-family: fallIsComing;
+    src: url('./Fall is Coming - TTF.ttf');
+}
+
+body {
+    width: 70%;
+    background: rgb(231, 230, 231);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

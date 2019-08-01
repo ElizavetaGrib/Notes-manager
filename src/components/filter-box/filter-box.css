@@ -1,0 +1,12 @@
+.filter-box {
+    font-family: fallIsComing;
+    color: rgb(231, 230, 231);
+    padding: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    background: rgb(54, 72, 110);
+}
+
+.filter {
+    display: inline-block;
+}
