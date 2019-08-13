@@ -1,6 +1,11 @@
 @font-face {
-    font-family: fallIsComing;
-    src: url('./Fall is Coming - TTF.ttf');
+    font-family: CrimsonText;
+    src: url('./CrimsonText-Regular.ttf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('./Montserrat-Regular.ttf');
 }
 
 body {
@@ -17,7 +22,7 @@ button {
 }
 
 ul {
-    list-style: none;
     padding: 0;
     margin: 0;
+    list-style: none;
 }

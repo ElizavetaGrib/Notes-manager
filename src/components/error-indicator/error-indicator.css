@@ -1,19 +1,22 @@
 .error-header {
-    padding: 1em;
-    border-radius: 1em;
-    font-size: 1.7em;
-    text-align: center;
     background: rgb(255, 100, 100);
     color: rgb(231, 230, 231);
+    font-family: CrimsonText;
+    font-size: 1.7em;
+    padding: 1em;
+    border-radius: 1em;
+    text-align: center;
 }
 
 summary {
+    font-family: Montserrat;
     font-size: 1.5em;
 }
 
-details{
-    padding: 1em;
-    border-radius: 1em;
+details {
     background: rgb(54, 72, 110);
     color: rgb(231, 230, 231);
+    font-family: Montserrat;
+    padding: 1em;
+    border-radius: 1em;
 }

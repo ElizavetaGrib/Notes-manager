@@ -1,23 +1,19 @@
 .form {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 1em;
     background: rgb(54, 72, 110);
+    padding: 1em;
     border-radius: 1em;
 }
 
 .form > * {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    font-family: Montserrat;
+    font-size: 1.5em;
+    padding: 10px 1em;
+    border: 1px solid rgb(54, 72, 110);
+    border-radius: 3px;
     box-sizing: border-box;
     display: block;
     outline: none;
-    border-radius: 3px;
-    border: 1px solid rgb(54, 72, 110);
-    padding: 10px;
-    font-family: fallIsComing;
-    font-size: 1.5em;
 }
 
 .header-input {
@@ -30,9 +26,9 @@
 }
 
 .cancel {
+    background: rgb(255, 100, 100);
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
-    background: rgb(255, 100, 100);
 }
 
 .cancel:hover {
