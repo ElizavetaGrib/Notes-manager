@@ -8,13 +8,15 @@ const withNotesService = () => (Wrapped) => {
             <NotesServiceConsumer>
                 {
                     (notesService) => {
-                        return (<Wrapped {...props}
-                                         notesService={notesService}/>);
+                        return (
+                            <Wrapped {...props}
+                                     notesService={notesService}/>
+                        );
                     }
                 }
             </NotesServiceConsumer>
         );
-    }
+    };
 };
 
 export default withNotesService;

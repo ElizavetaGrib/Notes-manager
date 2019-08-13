@@ -8,7 +8,7 @@ import './filter.css';
 class Filter extends Component {
 
     state = {
-        active: false,
+        active: false
     };
 
     onFilterClick = () => {
@@ -27,11 +27,12 @@ class Filter extends Component {
         const {active} = this.state;
         const className = active ? 'filter-tag active' : 'filter-tag';
         return (
-            <div className={className} onClick={this.onFilterClick}>
+            <div className={className}
+                 onClick={this.onFilterClick}>
                 {tag}
             </div>
         );
-    }
+    };
 
 }
 
@@ -40,7 +41,7 @@ const mapDispatchToProps = (dispatch) => {
         activeSwitcher: (tag, active) => {
             dispatch(activeSwitcher({tag, active}));
         }
-    }
+    };
 };
 
-export default connect(null, mapDispatchToProps)(Filter)
+export default connect(null, mapDispatchToProps)(Filter);

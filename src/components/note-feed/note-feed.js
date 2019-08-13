@@ -17,7 +17,7 @@ class NoteFeedContainer extends Component {
         const {notesService, notesLoaded} = this.props;
         notesService.getNotes()
             .then((data) => notesLoaded(data));
-    }
+    };
 
     render() {
         const {notes, loading, openModal} = this.props;
@@ -27,7 +27,7 @@ class NoteFeedContainer extends Component {
                 {content}
             </div>
         );
-    }
+    };
 }
 
 const NoteFeed = ({notes, openModal}) => {
@@ -38,7 +38,9 @@ const NoteFeed = ({notes, openModal}) => {
                 {
                     notes.map((note) => {
                         return (
-                            <li className='note' key={note.id} onDoubleClick={() => openModal(note)}>
+                            <li className='note'
+                                key={note.id}
+                                onDoubleClick={() => openModal(note)}>
                                 <Note note={note}/>
                             </li>
                         );
@@ -47,7 +49,6 @@ const NoteFeed = ({notes, openModal}) => {
             </ul>
         </>
     );
-
 };
 
 const mapStateToProps = ({notes, loading, sort, filters}) => {
@@ -56,7 +57,7 @@ const mapStateToProps = ({notes, loading, sort, filters}) => {
             let filtered = true;
             filters.forEach((filter) => {
                 if (!note.tags) {
-                    filtered = false
+                    filtered = false;
                 } else if (!note.tags.includes(filter)) {
                     filtered = false;
                 }
@@ -70,12 +71,7 @@ const mapStateToProps = ({notes, loading, sort, filters}) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         notesLoaded: (data) => dispatch(notesLoaded(data)),
-        openModal: (note) => dispatch(openModal({
-            id: note.id,
-            text: note.text,
-            header: note.header,
-            numDate: note.numDate
-        }))
+        openModal: (note) => dispatch(openModal(note))
     };
 };
 

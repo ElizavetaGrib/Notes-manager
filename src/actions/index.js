@@ -45,4 +45,4 @@ export {
     openModal,
     closeModal,
     submitNote
-}
+};

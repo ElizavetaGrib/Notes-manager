@@ -74,7 +74,6 @@ const reducer = (state = initialState, action) => {
                 if (note.tags) {
                     note.tags.forEach((tag) => newTags.add(tag));
                 }
-
             });
             return {
                 ...state,

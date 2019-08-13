@@ -13,7 +13,7 @@ const FilterBoxContainer = ({tags, loading}) => {
             {content}
         </div>
     );
-}
+};
 
 const FilterBox = ({tags}) => {
     return (
@@ -21,10 +21,11 @@ const FilterBox = ({tags}) => {
             {
                 tags.map((tag) => {
                     return (
-                        <li key={tag} className='filter'>
+                        <li className='filter'
+                            key={tag}>
                             <Filter tag={tag}/>
                         </li>
-                    )
+                    );
                 })
             }
         </ul>
@@ -32,7 +33,7 @@ const FilterBox = ({tags}) => {
 };
 
 const mapStateToProps = ({tags, loading}) => {
-    return {tags, loading}
-}
+    return {tags, loading};
+};
 
 export default connect(mapStateToProps, null)(FilterBoxContainer);

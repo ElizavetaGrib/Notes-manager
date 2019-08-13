@@ -1,6 +1,6 @@
 ## To read technical task you have to open
 
-### `technical-task.pdf`
+### `public/technical-task.pdf`
 
 ## To install dependencies you have to run 
 

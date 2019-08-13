@@ -11,14 +11,22 @@ export default class ErrorBoundry extends Component {
     };
 
     componentDidCatch(error, info) {
-        this.setState({hasError: true, error, info});
-    }
+        this.setState({
+            hasError: true,
+            error,
+            info
+        });
+    };
 
     render() {
-        if (this.state.hasError) {
-            return <ErrorIndicator error={this.state.error} info={this.state.info}/>;
+        const {hasError, error, info} = this.state;
+        if (hasError) {
+            return (
+                <ErrorIndicator error={error}
+                                info={info}/>
+            );
         }
         return this.props.children;
-    }
+    };
 
-}
+};

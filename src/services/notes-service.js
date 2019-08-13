@@ -7,8 +7,7 @@ export default class NotesService {
     getResource = async (url) => {
         const res = await fetch(url);
         if (!res.ok) {
-            throw new Error(`Could not fetch ${url}` +
-                `, received ${res.status}`)
+            throw new Error(`Could not fetch ${url}, received ${res.status}`);
         }
         return await res.json();
     };
@@ -26,7 +25,7 @@ export default class NotesService {
             strDate: new Date(note.date).toLocaleDateString(),
             numDate: note.date,
             tags: note.text.match(/(#[a-zA-Z\d][\w-]*)/gm)
-        }
+        };
     };
 
-}
+};

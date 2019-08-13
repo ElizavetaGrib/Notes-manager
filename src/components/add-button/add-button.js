@@ -16,8 +16,13 @@ const AddButton = ({openModal}) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        openModal: () => dispatch(openModal({id: '', header: '', text: '', numDate: null}))
-    }
+        openModal: () => dispatch(openModal({
+            id: '',
+            header: '',
+            text: '',
+            numDate: null
+        }))
+    };
 };
 
 export default connect(null, mapDispatchToProps)(AddButton);
