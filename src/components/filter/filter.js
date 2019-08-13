@@ -8,23 +8,23 @@ import './filter.css';
 class Filter extends Component {
 
     state = {
-        tag: this.props.tag,
         active: false,
     };
 
     onFilterClick = () => {
-        const {activeSwitcher} = this.props;
-        const {tag, active} = this.state;
+        const {activeSwitcher, tag} = this.props;
+        const {active} = this.state;
         activeSwitcher(tag, !active);
         this.setState((state) => {
             return {
                 active: !state.active
-            }
+            };
         });
     };
 
     render() {
-        const {tag, active} = this.state;
+        const {tag} = this.props;
+        const {active} = this.state;
         const className = active ? 'filter-tag active' : 'filter-tag';
         return (
             <div className={className} onClick={this.onFilterClick}>
