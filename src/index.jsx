@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 
 import store from './store';
 import NotesService from './services/notes-service';
-import ErrorBoundry from './components/error-boundry';
+import ErrorBoundary from './components/error-boundary';
 import {NotesServiceProvider} from './components/notes-service-context';
 import App from './components/app';
 
@@ -12,11 +12,11 @@ const notesService = new NotesService();
 
 ReactDOM.render(
     <Provider store={store}>
-        <ErrorBoundry>
+        <ErrorBoundary>
             <NotesServiceProvider value={notesService}>
                 <App/>
             </NotesServiceProvider>
-        </ErrorBoundry>
+        </ErrorBoundary>
     </Provider>,
     document.getElementById('root')
 );

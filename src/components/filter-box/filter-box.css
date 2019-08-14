@@ -1,7 +1,7 @@
 .filter-box {
     background: rgb(54, 72, 110);
     color: rgb(231, 230, 231);
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     padding: 1em;
     border-radius: 1em;
     margin-bottom: 1em;

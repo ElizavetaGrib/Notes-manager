@@ -1,9 +1,9 @@
-import React from 'react';
+import {createContext} from 'react';
 
 const {
     Provider: NotesServiceProvider,
     Consumer: NotesServiceConsumer
-} = React.createContext();
+} = createContext();
 
 export {
     NotesServiceProvider,

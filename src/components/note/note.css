@@ -1,16 +1,16 @@
 .header {
-    font-family: CrimsonText;
+    font-family: CrimsonText, serif;
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 0.2em;
 }
 
 .text {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
 }
 
 .date {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 0.7em;
     margin-top: 0.5em;
 }
