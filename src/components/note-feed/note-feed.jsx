@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {compose} from 'redux';
 import _ from 'lodash';
 
 import {notesLoaded, openModal} from '../../actions';
-import {compose} from '../../utils';
 import {withNotesService} from '../hoc';
 import Spinner from '../spinner';
 import SortButton from '../sort-button';
