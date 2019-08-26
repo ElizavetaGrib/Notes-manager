@@ -1,11 +1,11 @@
 @font-face {
     font-family: CrimsonText;
-    src: url('./CrimsonText-Regular.ttf');
+    src: url('./fonts/CrimsonText-Regular.ttf');
 }
 
 @font-face {
     font-family: Montserrat;
-    src: url('./Montserrat-Regular.ttf');
+    src: url('./fonts/Montserrat-Regular.ttf');
 }
 
 body {
