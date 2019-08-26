@@ -1,48 +1,58 @@
+const actionTypes = {
+    NOTES_LOADED: 'NOTES_LOADED',
+    DATE_SORTED: 'DATE_SORTED',
+    ACTIVE_SWITCHER: 'ACTIVE_SWITCHER',
+    OPEN_MODAL: 'OPEN_MODAL',
+    CLOSE_MODAL: 'CLOSE_MODAL',
+    SUBMIT_NOTE: 'SUBMIT_NOTE',
+};
+
 const notesLoaded = (newNotes) => {
     return {
-        type: 'NOTES_LOADED',
-        payload: newNotes
+        type: actionTypes.NOTES_LOADED,
+        payload: newNotes,
     };
 };
 
 const onDateSort = () => {
     return {
-        type: 'DATE_SORTED'
+        type: actionTypes.DATE_SORTED,
     };
 };
 
 const activeSwitcher = (filter) => {
     return {
-        type: 'ACTIVE_SWITCHER',
+        type: actionTypes.ACTIVE_SWITCHER,
         payload: filter,
     };
 };
 
 const openModal = (note) => {
     return {
-        type: 'OPEN_MODAL',
+        type: actionTypes.OPEN_MODAL,
         payload: note,
     };
 };
 
 const closeModal = () => {
     return {
-        type: 'CLOSE_MODAL'
+        type: actionTypes.CLOSE_MODAL,
     };
 };
 
 const submitNote = (note) => {
     return {
-        type: 'SUBMIT_NOTE',
-        payload: note
+        type: actionTypes.SUBMIT_NOTE,
+        payload: note,
     };
 };
 
 export {
+    actionTypes,
     notesLoaded,
     onDateSort,
     activeSwitcher,
     openModal,
     closeModal,
-    submitNote
+    submitNote,
 };

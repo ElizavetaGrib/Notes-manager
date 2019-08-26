@@ -1,3 +1,5 @@
+import {actionTypes} from '../actions';
+
 const initialState = {
     notes: [],
     tags: [],
@@ -10,7 +12,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'NOTES_LOADED':
+        case actionTypes.NOTES_LOADED:
             const notes = action.payload;
             const tags = new Set();
             notes.forEach((note) => {
@@ -22,13 +24,13 @@ const reducer = (state = initialState, action) => {
                 loading: false,
                 tags: Array.from(tags)
             };
-        case 'DATE_SORTED':
+        case actionTypes.DATE_SORTED:
             const sortValue = (state.sort === 'asc') ? 'desc' : 'asc';
             return {
                 ...state,
                 sort: sortValue
             };
-        case 'ACTIVE_SWITCHER':
+        case actionTypes.ACTIVE_SWITCHER:
             if (action.payload.active) {
                 return {
                     ...state,
@@ -41,19 +43,19 @@ const reducer = (state = initialState, action) => {
                     filters: [...state.filters.slice(0, idxFilter), ...state.filters.slice(idxFilter + 1)]
                 };
             }
-        case 'OPEN_MODAL':
+        case actionTypes.OPEN_MODAL:
             return {
                 ...state,
                 modalON: true,
                 mutableNote: {...action.payload}
             };
-        case 'CLOSE_MODAL':
+        case actionTypes.CLOSE_MODAL:
             return {
                 ...state,
                 modalON: false,
                 mutableNote: null
             };
-        case 'SUBMIT_NOTE':
+        case actionTypes.SUBMIT_NOTE:
             const {text, numDate} = action.payload;
             const note = {
                 ...action.payload,
