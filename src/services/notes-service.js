@@ -4,17 +4,12 @@ export default class NotesService {
 
     _apiUrl = 'data.json';
 
-    getResource = async (url) => {
+    _getResource = async (url) => {
         const res = await fetch(url);
         if (!res.ok) {
             throw new Error(`Could not fetch ${url}, received ${res.status}`);
         }
         return await res.json();
-    };
-
-    getNotes = async () => {
-        const res = await this.getResource(this._apiUrl);
-        return res.notes.map(this._transformNotes);
     };
 
     _transformNotes = (note) => {
@@ -26,6 +21,11 @@ export default class NotesService {
             numDate: note.date,
             tags: note.text.match(/(#[a-zA-Z\d][\w-]*)/gm)
         };
+    };
+
+    getNotes = async () => {
+        const res = await this._getResource(this._apiUrl);
+        return res.notes.map(this._transformNotes);
     };
 
 };
