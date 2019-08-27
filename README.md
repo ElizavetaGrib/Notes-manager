@@ -1,19 +1,25 @@
-## To read technical task you have to open
+# Notes-manager
 
-### `public/technical-task.pdf`
+React app for managing your own notes with hashtags
 
-## To install dependencies you have to run 
+## Terms of reference
+
+To read terms of reference open `TOR.pdf`
+
+## How to use
+
+### To install dependencies you have to run 
 
 ### `npm install`
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.<br>
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
