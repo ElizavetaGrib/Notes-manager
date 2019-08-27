@@ -17,7 +17,7 @@ class Filter extends Component {
         activeSwitcher(tag, !active);
         this.setState((state) => {
             return {
-                active: !state.active
+                active: !state.active,
             };
         });
     };
@@ -40,7 +40,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         activeSwitcher: (tag, active) => {
             dispatch(activeSwitcher({tag, active}));
-        }
+        },
     };
 };
 

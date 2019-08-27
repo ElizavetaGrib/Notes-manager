@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
             id: '',
             header: '',
             text: '',
-            numDate: null
+            numDate: null,
         }))
     };
 };

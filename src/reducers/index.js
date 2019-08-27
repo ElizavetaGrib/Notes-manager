@@ -7,7 +7,7 @@ const initialState = {
     filters: [],
     sort: 'desc',
     mutableNote: null,
-    modalON: false
+    modalON: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -22,45 +22,45 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 notes: action.payload,
                 loading: false,
-                tags: Array.from(tags)
+                tags: Array.from(tags),
             };
         case actionTypes.DATE_SORTED:
             const sortValue = (state.sort === 'asc') ? 'desc' : 'asc';
             return {
                 ...state,
-                sort: sortValue
+                sort: sortValue,
             };
         case actionTypes.ACTIVE_SWITCHER:
             if (action.payload.active) {
                 return {
                     ...state,
-                    filters: [...state.filters, action.payload.tag]
+                    filters: [...state.filters, action.payload.tag],
                 };
             } else {
                 const idxFilter = state.filters.findIndex((tag) => tag === action.payload.tag);
                 return {
                     ...state,
-                    filters: [...state.filters.slice(0, idxFilter), ...state.filters.slice(idxFilter + 1)]
+                    filters: [...state.filters.slice(0, idxFilter), ...state.filters.slice(idxFilter + 1)],
                 };
             }
         case actionTypes.OPEN_MODAL:
             return {
                 ...state,
                 modalON: true,
-                mutableNote: {...action.payload}
+                mutableNote: {...action.payload},
             };
         case actionTypes.CLOSE_MODAL:
             return {
                 ...state,
                 modalON: false,
-                mutableNote: null
+                mutableNote: null,
             };
         case actionTypes.SUBMIT_NOTE:
             const {text, numDate} = action.payload;
             const note = {
                 ...action.payload,
                 strDate: new Date(numDate).toLocaleDateString(),
-                tags: text.match(/(#[A-Za-z\d][\w-]*)/gm)
+                tags: text.match(/(#[A-Za-z\d][\w-]*)/gm),
             };
             let idx = state.notes.findIndex((note) => note.id === action.payload.id);
             if (idx === -1) {
@@ -69,7 +69,7 @@ const reducer = (state = initialState, action) => {
             const newNotes = [
                 ...state.notes.slice(0, idx),
                 note,
-                ...state.notes.slice(idx + 1)
+                ...state.notes.slice(idx + 1),
             ];
             const newTags = new Set();
             newNotes.forEach((note) => {
@@ -82,7 +82,7 @@ const reducer = (state = initialState, action) => {
                 notes: newNotes,
                 tags: Array.from(newTags),
                 modalON: false,
-                mutableNote: null
+                mutableNote: null,
             };
         default:
             return state;

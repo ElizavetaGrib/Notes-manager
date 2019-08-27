@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {compose} from 'redux';
-import _ from 'lodash';
+import {orderBy} from 'lodash';
 
 import {notesLoaded, openModal} from '../../actions';
 import {withNotesService} from '../hoc';
@@ -53,7 +53,7 @@ const NoteFeed = ({notes, openModal}) => {
 
 const mapStateToProps = ({notes, loading, sort, filters}) => {
     return {
-        notes: _.orderBy([...notes].filter((note) => {
+        notes: orderBy([...notes].filter((note) => {
             let filtered = true;
             filters.forEach((filter) => {
                 if (!note.tags) {
@@ -64,14 +64,14 @@ const mapStateToProps = ({notes, loading, sort, filters}) => {
             });
             return filtered;
         }), ['numDate'], [sort]),
-        loading
+        loading,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         notesLoaded: (data) => dispatch(notesLoaded(data)),
-        openModal: (note) => dispatch(openModal(note))
+        openModal: (note) => dispatch(openModal(note)),
     };
 };
 

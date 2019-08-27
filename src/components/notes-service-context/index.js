@@ -5,5 +5,5 @@ import {
 
 export {
     NotesServiceProvider,
-    NotesServiceConsumer
+    NotesServiceConsumer,
 };

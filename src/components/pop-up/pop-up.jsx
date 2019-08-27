@@ -15,7 +15,7 @@ class PopUp extends Component {
         id: null,
         header: '',
         text: '',
-        numDate: null
+        numDate: null,
     };
 
     componentDidUpdate() {
@@ -29,13 +29,13 @@ class PopUp extends Component {
 
     changeHeader = (e) => {
         this.setState({
-            header: e.target.value
+            header: e.target.value,
         });
     };
 
     changeText = (e) => {
         this.setState({
-            text: e.target.value
+            text: e.target.value,
         });
     };
 
@@ -54,13 +54,13 @@ class PopUp extends Component {
             id,
             header: this.state.header,
             text: this.state.text,
-            numDate
+            numDate,
         });
         this.setState({
             id: null,
             header: '',
             text: '',
-            numDate: null
+            numDate: null,
         });
     };
 
@@ -69,7 +69,7 @@ class PopUp extends Component {
             id: null,
             header: '',
             text: '',
-            numDate: null
+            numDate: null,
         });
         this.props.onClosePopUp();
     };
@@ -85,7 +85,7 @@ class PopUp extends Component {
                            border: 'none',
                            width: '50%',
                            marginLeft: 'auto',
-                           marginRight: 'auto'
+                           marginRight: 'auto',
                        }
                    }}>
                 <form className='form'
@@ -121,14 +121,14 @@ class PopUp extends Component {
 const mapStateToProps = ({modalON, mutableNote}) => {
     return {
         modalON,
-        mutableNote
+        mutableNote,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
         onClosePopUp: () => dispatch(closeModal()),
-        onPopUpSubmit: (note) => dispatch(submitNote(note))
+        onPopUpSubmit: (note) => dispatch(submitNote(note)),
     };
 };
 

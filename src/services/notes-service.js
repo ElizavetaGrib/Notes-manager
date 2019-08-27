@@ -19,7 +19,7 @@ export default class NotesService {
             text: note.text,
             strDate: new Date(note.date).toLocaleDateString(),
             numDate: note.date,
-            tags: note.text.match(/(#[a-zA-Z\d][\w-]*)/gm)
+            tags: note.text.match(/(#[a-zA-Z\d][\w-]*)/gm),
         };
     };
 

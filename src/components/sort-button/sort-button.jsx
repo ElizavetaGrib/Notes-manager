@@ -19,13 +19,13 @@ const SortButton = ({sort, onDateSort}) => {
 
 const mapStateToProps = ({sort}) => {
     return {
-        sort
+        sort,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onDateSort: () => dispatch(onDateSort())
+        onDateSort: () => dispatch(onDateSort()),
     };
 };
 

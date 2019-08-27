@@ -7,5 +7,5 @@ const {
 
 export {
     NotesServiceProvider,
-    NotesServiceConsumer
+    NotesServiceConsumer,
 };
