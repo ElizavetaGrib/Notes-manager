@@ -7,7 +7,7 @@
 
 .filter-tag:hover {
     background: green;
-    color: rgb(231, 230, 231);
+    color: #fff;
     cursor: pointer;
 }
 

@@ -1,6 +1,6 @@
 .error-header {
     background: rgb(255, 100, 100);
-    color: rgb(231, 230, 231);
+    color: #fff;
     font-family: CrimsonText, serif;
     font-size: 1.7em;
     padding: 1em;
@@ -15,7 +15,7 @@ summary {
 
 details {
     background: rgb(54, 72, 110);
-    color: rgb(231, 230, 231);
+    color: #fff;
     font-family: Montserrat, sans-serif;
     padding: 1em;
     border-radius: 1em;
