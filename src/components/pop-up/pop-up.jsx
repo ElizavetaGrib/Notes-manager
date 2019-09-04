@@ -7,8 +7,6 @@ import {closeModal, submitNote} from '../../actions';
 
 import './pop-up.css';
 
-Modal.setAppElement(document.getElementById('root'));
-
 class PopUp extends Component {
 
     state = {
@@ -79,6 +77,7 @@ class PopUp extends Component {
         const {header, text} = this.state;
         return (
             <Modal isOpen={modalON}
+                   ariaHideApp={false}
                    style={{
                        content: {
                            background: 'transparent',
