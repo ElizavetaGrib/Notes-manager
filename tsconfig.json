@@ -1,12 +1,8 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "commonjs",
-    "lib": [
-      "es6",
-      "es2017.object",
-      "dom"
-    ],
+    "module": "esnext",
+    "lib": ["es6", "es2017.object", "dom"],
     "allowJs": true,
     "checkJs": true,
     "jsx": "react",
@@ -21,9 +17,10 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {}
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
